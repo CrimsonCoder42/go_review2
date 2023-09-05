@@ -49,7 +49,7 @@ func main() {
 //* Use the accessGranted() and accessDenied() functions to display
 //  informational messages
 	// The day and role. Change these to check your work.
-	today, role := Wednesday, Guest
+	today, role := Tuesday, Guest
 
 	if role <= 20 {
 		accessGranted()
