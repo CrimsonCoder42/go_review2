@@ -34,7 +34,7 @@ func roll(sides int) int {
 
 func main() {
 
-	dice, sides := 2, 12
+	dice, sides := 2, 6
 	rolls := 5
 
 	for r := 1; r <= rolls; r++ {
