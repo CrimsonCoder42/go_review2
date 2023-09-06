@@ -24,23 +24,23 @@ type Rectangle struct {
 	width int
 }
 
-func perimeter(length, width int) int{
+func perimeter(rec Rectangle) int{
 
-	return (length * 2) + (width * 2)
+	return (rec.length * 2) + (rec.width * 2)
 
 }
 
-func area(length, width int) int {
-	return length * width
+func area(rect Rectangle) int {
+	return rect.length * rect.width
 }
 
 func main() {
 
 	rec1 := Rectangle{4,5}
-	recArea := area(rec1.length, rec1.width)
+	recArea := area(rec1)
 	fmt.Println(recArea)
 
-	recPerim := perimeter(rec1.length, rec1.width)
+	recPerim := perimeter(rec1)
 	fmt.Println(recPerim)
 
 }

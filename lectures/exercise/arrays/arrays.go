@@ -16,8 +16,38 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type Products struct {
+	Name  string
+	Price float32
+}
+
+func priceTotal(items [4]Products) float32 {
+	var total float32
+	for i := 0; i < len(items); i++ {
+		total += items[i].Price
+	}
+	return total
+
+}
 
 func main() {
+	list := [4]Products{
+		{"Milk", 4.99},
+		{"bread", 3.99},
+		{"eggs", 2.99},
+	}
+
+	fmt.Println(list[2])
+	fmt.Println(len(list))
+	fmt.Println(priceTotal(list))
+
+	list[3] = Products{"Fish", 29.99}
+	fmt.Println(list[len(list) - 1])
+	fmt.Println(len(list))
+	fmt.Println(priceTotal(list))
 
 }
