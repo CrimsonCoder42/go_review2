@@ -18,5 +18,21 @@ import "fmt"
 
 type Part string
 
+func printSlice(title string, slice []Part) {
+	fmt.Println()
+	fmt.Println("----", title, "----")
+	for i := 0; i < len(slice); i++ {
+		element := slice[i]
+		fmt.Println(i, element)
+	}
+}
+
 func main() {
+
+	items := []Part{"block1", "block2", "block 3"}
+	items = append(items, "block4", "block5")
+	printSlice("first run", items)
+
+	items = items[3:]
+	printSlice("second run", items)
 }
